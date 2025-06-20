@@ -1,0 +1,111 @@
+        body{
+            background-color: rgb(12, 16, 37);
+            color: rgb(165, 155, 155);
+            margin: 2%;
+            padding:20px;
+            /*border:2px solid black;*/
+            display: block;
+            height:auto;
+            font-family: outfit;
+
+        }
+        
+        .section{
+            border-radius:20px;
+            margin: 20px;
+            padding:10px 30px;
+            background-color: rgb(13, 22, 75);
+        }
+        .hero{
+            font-family: outfit;
+            font-weight: 600;
+            text-align: center;
+            justify-items: center;
+            align-items: center;
+            position:relative;
+            justify-content: center;
+            
+        }
+        .hero > h1 {
+            animation: fadeIn 1s ease forwards;
+            opacity: 0;
+        }
+        .section > h2{
+            font-size: 30px;
+        }
+        p{
+            font-size: 20px;
+            font-weight: 500;
+            padding: 20px 10px;
+        }
+        li{
+            font-size: 20px;
+        }
+    
+        .hero > img{
+            height: 200px;
+            width: auto;
+            border-radius: 50%;
+            border: 2px solid white;
+            animation: slideIn 1s ease forwards;
+            opacity: 0; 
+            transform: translateY(20px);
+        }
+        .sub_head{
+            padding: 10px 10px;
+        }
+   
+      
+        .social_accounts{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            
+        }     
+        .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid black;
+        border-radius: 20px;
+        margin: 1% 1%;
+        padding: 0 1.5%;
+        background-color: rgb(11, 19, 64);
+        width: 255px;
+        max-width: 250px;
+        height: auto;
+        }
+
+        .card:hover, .card:hover .card_head{
+            background-color: rgb(61, 80, 93);
+            transition: 0.5s;
+            color: rgb(0, 0, 0);
+            
+        }
+        .card:hover img {
+            border: 1px solid black;
+            
+        }
+        .card a{
+            text-decoration: none;
+            color: inherit;
+            text-align: center;
+            align-items: center;
+            justify-items: center;
+            justify-items: center;
+            align-content: center;
+        }
+        .card img {
+            height: 100px;
+            width: auto;
+            border-radius: 50%;
+            border: 2px solid white;   
+            text-align: center;
+            justify-items: center;
+            align-items: center;
+            position:relative;
+            justify-content: center;     
+            
+        }
+    
