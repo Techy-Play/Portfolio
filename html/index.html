@@ -7,18 +7,32 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 </head>
 <body>
+    <header class="header">
+    <h1>Welcome to My Portfolio Site</h1>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#about_me">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+  </header>
+  <div class="article">
     <div class="hero">
         <h1>Hi, I'm Lokesh Paneru.</h1>
         <img src="profile.JPG" alt="profile_image">
     </div>
     
-    <div class="section">
+    <div class="section" id="about_me">
         <h2>About me</h2>
         <p>I am a passionate and dedicated B.Tech student specializing in Computer Science with a focus on IoT and Data Science at Amrapali University. With a strong foundation in Python, web development (HTML, CSS), and growing skills in JavaScript, I aim to build innovative and secure technology solutions. I am also actively learning ethical hacking and AI/ML to expand my problem-solving capabilities. Known for being a quick learner and enthusiastic team player, I’m eager to contribute to real-world projects and continue evolving as a future-ready tech professional.</p>
     </div>
-    <div class="section">
+    <div class="section" id="skills">
         <h2>My Skills</h2>
         <h3 class="sub_head">Programming & Development:</h3>
         <ul>
@@ -73,7 +87,24 @@
             </a>
         </div>
         </div>
+        
+
+
     </div>
+    <div class="section" id="contact">
+        
+  <h2>Contact Me</h2>
+    <ul>
+        <li>Email: <a class="mail" href="mailto:lokeshpaneru20508@gmail.com"><i>lokeshpaneru20508@gmail.com</i></a></li>
+        <li>Location: Haldwani, Uttarakhand</li>
+    </ul>
+</div>
+</div>
+<footer class="footer">
+    <p>&copy; 2025 Lokesh's Website</p>
+  </footer>
+
+
 <style>
    @keyframes slideIn {
   to {
