@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+
+  <!-- Home Page -->
+  <url>
+    <loc>https://lokeshpaneru.netlify.app/</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://lokeshpaneru.netlify.app/profile.JPG</image:loc>
+      <image:title>Lokesh Paneru - B.Tech CSE Student</image:title>
+    </image:image>
+  </url>
+
+  <!-- Profile Section -->
+  <url>
+    <loc>https://lokeshpaneru.netlify.app/#profile</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Education Section -->
+  <url>
+    <loc>https://lokeshpaneru.netlify.app/#education</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Experience Section -->
+  <url>
+    <loc>https://lokeshpaneru.netlify.app/#experience</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Projects Section -->
+  <url>
+    <loc>https://lokeshpaneru.netlify.app/#projects</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Skills Section -->
+  <url>
+    <loc>https://lokeshpaneru.netlify.app/#skills</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>quarterly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Certifications Section -->
+  <url>
+    <loc>https://lokeshpaneru.netlify.app/#certifications</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>quarterly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Achievements Section -->
+  <url>
+    <loc>https://lokeshpaneru.netlify.app/#achievements</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>quarterly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Interests Section -->
+  <url>
+    <loc>https://lokeshpaneru.netlify.app/#interests</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Extracurriculars Section -->
+  <url>
+    <loc>https://lokeshpaneru.netlify.app/#extracurriculars</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Contact Section -->
+  <url>
+    <loc>https://lokeshpaneru.netlify.app/#contact</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+</urlset>

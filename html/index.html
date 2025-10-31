@@ -1,131 +1,459 @@
 <!DOCTYPE html>
 <html lang="en-IN">
 <head>
-    <title>Lokesh — My Personal Introduction</title>
+    <!-- Character Encoding & Viewport -->
     <meta charset="UTF-8">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Title & Meta Description (SEO) -->
+    <title>Lokesh Paneru — B.Tech CSE Student | IoT, Web Dev, AI/ML Portfolio</title>
+    <meta name="description" content="Lokesh Paneru's professional portfolio — B.Tech CSE (IoT & Data Science) student at Amrapali University. Specializing in IoT development, full-stack web development, and AI/ML. View projects, skills, achievements, and get in touch.">
+    <meta name="keywords" content="Lokesh Paneru, portfolio, B.Tech CSE, IoT developer, web developer, AI/ML, Python, React, Next.js, ESP32, smart projects, Amrapali University, Haldwani, India">
+    
+    <!-- Author & Canonical -->
+    <meta name="author" content="Lokesh Paneru">
+    <link rel="canonical" href="https://lokeshpaneru.netlify.app/">
+    
+    <!-- Language & Region Targeting -->
+    <meta name="language" content="en-IN">
+    <meta name="geo.region" content="IN-UT">
+    <meta name="geo.placename" content="Haldwani, Uttarakhand">
+    
+    <!-- SEO Robots & Indexing -->
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="bingbot" content="index, follow, max-image-preview:large">
+    
+    <!-- Theme Color & PWA -->
+    <meta name="theme-color" content="#0c1037">
+    <meta name="msapplication-TileColor" content="#0c1037">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Lokesh Paneru">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="../manifest.json">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="icon-512.png">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- Preconnect for Performance (Google Fonts) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="icon.png" type="image/x-icon" >
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
 
+    <!-- Google Fonts (Outfit) -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;300;400;600;700;800;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 
-<!-- SEO Meta Tags for Lokesh Paneru -->
-<meta charset="UTF-8">
-<meta name="author" content="Lokesh Paneru">
-<meta name="description" content="Official portfolio website of Lokesh Paneru — B.Tech CSE (IoT & Data Science) student, Web Developer, Ethical Hacking & AI/ML Enthusiast at Amrapali University. Explore projects, skills, resume, and connect with Lokesh.">
-<meta name="keywords" content="Lokesh Paneru, About Lokesh Paneru, Lokesh Paneru portfolio,Lokesh Paneru Resume, Lokesh Paneru Skills, Lokesh Paneru website, Web Developer India, India, B.Tech IoT, Amrapali University, Python Developer, HTML CSS JavaScript, GitHub, LinkedIn, Who Is Lokesh Paneru">
-<meta name="robots" content="index, follow">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles.css" media="screen">
+    
+    <!-- Inline Critical CSS (LCP Optimization) -->
+    <style>
+        html { scroll-behavior: smooth; scroll-padding-top: 140px; }
+        body { margin: 0; padding: 0; font-family: 'Outfit', system-ui, sans-serif; background: linear-gradient(135deg, #0c1037 0%, #141b3f 50%, #0d1b4f 100%); background-attachment: fixed; color: rgb(237, 255, 213); }
+        .header { background: linear-gradient(135deg, #0f0f23 0%, #1a1a3e 50%, #0d1b4f 100%); color: #fff; padding: 1rem 1.5rem; border-bottom: 3px solid #4cffff; position: sticky; top: 0; z-index: 1000; }
+        .header-container { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; }
+        .logo { font-size: 1.5rem; font-weight: 700; color: #4cffff; margin: 0; }
+        .hero { text-align: center; padding: 3rem 1.5rem; }
+        .hero h2 { font-size: 3rem; color: #4cffff; margin: 0; font-weight: 800; }
+        .hero p { font-size: 1.3rem; color: rgba(237, 255, 213, 0.8); max-width: 600px; margin: 1rem auto; }
+        .hero img { width: 250px; height: 250px; border-radius: 50%; border: 4px solid #4cffff; object-fit: cover; }
+    </style>
 
-<!-- Open Graph for Social Sharing -->
-<meta property="og:title" content="Lokesh Paneru — Web Dev & Ethical Hacking Enthusiast">
-<meta property="og:description" content="Explore Lokesh Paneru's portfolio — Web Developer, Cybersecurity Learner, and Future Tech Leader.">
-<meta property="og:image" content="https://lokeshpaneru.netlify.app/profile.JPG">
-<meta property="og:url" content="https://lokeshpaneru.netlify.app">
-<meta property="og:type" content="website">
+    <!-- Open Graph for Social Sharing (LinkedIn, Facebook, Twitter) -->
+    <meta property="og:title" content="Lokesh Paneru — B.Tech CSE Student | IoT & Web Developer">
+    <meta property="og:description" content="B.Tech CSE student specializing in IoT and Data Science. Full-stack developer, AI/ML enthusiast, and robotics competitor. View my portfolio projects and skills.">
+    <meta property="og:url" content="https://lokeshpaneru.netlify.app/">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://lokeshpaneru.netlify.app/og-image-1200x630.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:alt" content="Lokesh Paneru's professional portfolio website">
+    <meta property="og:locale" content="en_IN">
+    <meta property="og:site_name" content="Lokesh Paneru Portfolio">
 
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Lokesh Paneru — Portfolio">
-<meta name="twitter:description" content="Web Dev • Cybersecurity • IoT • AI/ML | Follow my journey.">
-<meta name="twitter:image" content="https://lokeshpaneru.netlify.app/profile.JPG">
+    <!-- Twitter Card (X.com) -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@lokeshpaneru">
+    <meta name="twitter:creator" content="@lokeshpaneru">
+    <meta name="twitter:title" content="Lokesh Paneru — B.Tech CSE Student | IoT, Web Dev, AI/ML">
+    <meta name="twitter:description" content="Full-stack web developer. IoT specialist. AI/ML learner. Winner of Kumaon Inter School Competition. First runner-up, National Hackathon.">
+    <meta name="twitter:image" content="https://lokeshpaneru.netlify.app/twitter-image-1024x512.jpg">
+    <meta name="twitter:image:alt" content="Lokesh Paneru — Web Developer Portfolio">
+
+    <!-- LinkedIn Optimization -->
+    <meta property="article:published_time" content="2025-01-01T00:00:00Z">
+    <meta property="article:author" content="Lokesh Paneru">
+
+    <!-- Structured Data (JSON-LD) - Person Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Lokesh Paneru",
+        "url": "https://lokeshpaneru.netlify.app/",
+        "image": "https://lokeshpaneru.netlify.app/profile.JPG",
+        "description": "B.Tech CSE student specializing in IoT and Data Science at Amrapali University. Full-stack web developer, AI/ML enthusiast, and robotics competitor.",
+        "email": "lokeshpaneru20508@gmail.com",
+        "telephone": "+91-97198983725",
+        "jobTitle": "Student Developer & Prompt Engineer",
+        "gender": "Male",
+        "birthDate": "2006",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Haldwani",
+            "addressLocality": "Haldwani",
+            "addressRegion": "Uttarakhand",
+            "postalCode": "263139",
+            "addressCountry": "India"
+        },
+        "alumniOf": {
+            "@type": "EducationalOrganization",
+            "name": "Amrapali University",
+            "url": "https://amrapali.ac.in"
+        },
+        "knowsAbout": [
+            "Web Development",
+            "IoT Development",
+            "Python Programming",
+            "React.js",
+            "Next.js",
+            "Arduino",
+            "ESP32",
+            "AI/ML",
+            "Full-Stack Development",
+            "Prompt Engineering",
+            "Robotics"
+        ],
+        "sameAs": [
+            "https://github.com/Techy-Play",
+            "https://www.linkedin.com/in/lokeshpaneru/",
+            "https://twitter.com/lokeshpaneru"
+        ]
+    }
+    </script>
+
+    <!-- Structured Data (JSON-LD) - BreadcrumbList (Navigation) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://lokeshpaneru.netlify.app/#home"},
+            {"@type": "ListItem", "position": 2, "name": "Profile", "item": "https://lokeshpaneru.netlify.app/#profile"},
+            {"@type": "ListItem", "position": 3, "name": "Education", "item": "https://lokeshpaneru.netlify.app/#education"},
+            {"@type": "ListItem", "position": 4, "name": "Experience", "item": "https://lokeshpaneru.netlify.app/#experience"},
+            {"@type": "ListItem", "position": 5, "name": "Projects", "item": "https://lokeshpaneru.netlify.app/#projects"},
+            {"@type": "ListItem", "position": 6, "name": "Skills", "item": "https://lokeshpaneru.netlify.app/#skills"},
+            {"@type": "ListItem", "position": 7, "name": "Certifications", "item": "https://lokeshpaneru.netlify.app/#certifications"},
+            {"@type": "ListItem", "position": 8, "name": "Achievements", "item": "https://lokeshpaneru.netlify.app/#achievements"},
+            {"@type": "ListItem", "position": 9, "name": "Contact", "item": "https://lokeshpaneru.netlify.app/#contact"}
+        ]
+    }
+    </script>
+
+    <!-- Structured Data (JSON-LD) - FAQ Schema (AEO/Voice Search) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Who is Lokesh Paneru?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Lokesh Paneru is a B.Tech CSE student specializing in IoT and Data Science at Amrapali University, Haldwani. He is a full-stack web developer, prompt engineer, and AI/ML enthusiast with expertise in Python, React, Next.js, and IoT platforms like ESP32 and Arduino."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What projects has Lokesh Paneru built?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Lokesh has built several successful projects: Smart Recycling Hub (Next.js web app with live mapping), Smart Cleaning Bot (ESP32-based robotics), IoT Home Automation system, Smart Auto Irrigation System, Railway Platform Security System (winner of Kumaon Competition), and Alumni Connect Platform (runner-up in National Hackathon)."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What are Lokesh Paneru's main skills?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Lokesh's main technical skills include: Programming (Python, C, C++, Java), Web Technologies (HTML, CSS, JavaScript, React, Next.js, Tailwind), IoT (ESP32, Arduino), Databases (MySQL, PostgreSQL, SQLite), Version Control (Git, GitHub), Design (Figma, AutoCAD), and AI/ML (Prompt Engineering, Model Evaluation)."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How can I contact Lokesh Paneru?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "You can contact Lokesh via email at lokeshpaneru20508@gmail.com or phone at +91-97198983725. You can also reach him through his GitHub (github.com/Techy-Play) or LinkedIn (linkedin.com/in/lokeshpaneru/)."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What awards has Lokesh Paneru won?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Lokesh won the Kumaon Inter School Competition in December 2023 for his Railway Platform Security System project, receiving INR 11,000 and a 50% scholarship to Amrapali University. He was also the first runner-up in a National Level Hackathon at Graphic Era Hill University for the Alumni Connect Platform. He is a finalist in the AtomQuest 2025 National Robotics Competition."
+                }
+            }
+        ]
+    }
+    </script>
 
 </head>
 <body>
     <header class="header">
-    <h1>Welcome to My Portfolio Site</h1>
-    <nav class="navbar">
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#about_me">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-  </header>
-  <div class="article">
-    <div class="hero">
-        <h1>Hi, I'm Lokesh Paneru.</h1>
-        <img src="profile.JPG" alt="profile_image">
-    </div>
-    
-    <div class="section" id="about_me">
-        <h2>About me</h2>
-        <p>I am a passionate and dedicated B.Tech student specializing in Computer Science with a focus on IoT and Data Science at Amrapali University. With a strong foundation in Python, web development (HTML, CSS), and growing skills in JavaScript, I aim to build innovative and secure technology solutions. I am also actively learning ethical hacking and AI/ML to expand my problem-solving capabilities. Known for being a quick learner and enthusiastic team player, I’m eager to contribute to real-world projects and continue evolving as a future-ready tech professional.</p>
-    </div>
-    <div class="section" id="skills">
-        <h2>My Skills</h2>
-        <h3 class="sub_head">Programming & Development:</h3>
-        <ul>
-            <li>Python (Core + Libraries like NumPy, Pandas)</li>
-            <li>HTML5, CSS3, JavaScript (Basic to Intermediate)</li>
-            <li>SQLite integration with Python</li>
-            <li>Web Development (Front-End Focus)</li>
-        </ul>
-        <h3 class="sub_head">Cybersecurity & Ethical Hacking:</h3>
-        <ul>
-            <li>Kali Linux usage</li>
-            <li>Basic penetration testing</li>
-            <li>Vulnerability scanning & bug hunting (learning phase)</li>
-            <li>Familiar with tools like Nmap, Burp Suite, Wireshark</li>
-        </ul>
-        <h3 class="sub_head">Technologies & Platforms:</h3>
-        <ul>
-            <li>ESP32 Microcontroller (IoT Projects)</li>
-            <li>Arduino Programming</li>
-            <li>AWS EC2 & Load Balancing (Beginner level)</li>
-            <li>Git & GitHub</li>
-        </ul>
-    </div>
-
-
-    <div class="section">
-        <h2>My Goals</h2>
-        <ul>
-            <li>💻 Become a successful freelance web developer</li>
-            <li>🔐 Learn ethical hacking and bug bounty hunting</li>
-            <li>🔥 Rebuild myself and make my family proud</li>
-        </ul>
-    </div>
-    <h2> These are the links to my social accounts:-</h2>
-    <div class="section">
-        <ul class="links">
-            
-        </ul>
-        <div class="social_accounts">
-
-        <div class="card">
-            <a href="https://github.com/Techy-Play" target="_blank"><h2 class="card_head">Github</h2>
-            <img src="https://avatars.githubusercontent.com/u/177655205?v=4" alt="Github_profile_image">
-            <p class="card_body">Username: <i><b>Techy-Play</b></i></p>
-            </a>
+        <div class="header-container">
+            <h1 class="logo">Lokesh Paneru</h1>
+            <button class="hamburger" id="hamburger" aria-label="Toggle Navigation Menu" aria-expanded="false" aria-controls="navbar">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </button>
         </div>
-        <div class="card">
-            <a href="https://www.linkedin.com/in/lokeshpaneru/" target="_blank">
-            <h2 class="card_head">LinkedIn</h2>
-            <img src="https://media.licdn.com/dms/image/v2/D4E03AQGpZV9rxY9tiQ/profile-displayphoto-crop_800_800/B4EZjxYmGPGUAQ-/0/1756396415369?e=1763596800&v=beta&t=PEJIt2LETf7WSoPnynZMxxfmJuafxpzICMKPNr0L8aQ" alt="LinkedIn_profile_image">
-            <p class="card_body">Username: <i><b>Lokesh Paneru</b></i></p>
-            </a>
-        </div>
-        </div>
-        
+        <nav class="navbar" id="navbar" role="navigation" aria-label="Main Navigation">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#profile">Profile</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#achievements">Achievements</a></li>
+                <li><a href="#interests">Interests</a></li>
+                <li><a href="#extracurriculars">Extracurriculars</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="article" id="home">
+        <section class="hero">
+            <div class="hero-copy">
+                <h2>Hi, I'm Lokesh Paneru.</h2>
+                <p>B.Tech CSE student focused on IoT and Data Science, designing secure, human-centered technology across web, AI, and robotics.</p>
+            </div>
+            <img src="profile.JPG" alt="Lokesh Paneru portrait">
+        </section>
 
+        <section class="section" id="profile">
+            <h2>Profile</h2>
+            <p>B.Tech CSE student specializing in IoT and Data Science at Amrapali University, currently exploring AI, web development, and IoT integration. I have gained hands-on experience in Python programming, prompt engineering, and small-scale IoT projects, and I am continuously learning to expand my technical understanding. Passionate about robotics, automation, and ethical AI, I am building practical skills through projects, competitions, and real-world learning opportunities.</p>
+        </section>
 
-    </div>
-    <div class="section" id="contact">
-        
-  <h2>Contact Me</h2>
-    <ul>
-        <li>Email: <a class="mail" href="mailto:lokeshpaneru20508@gmail.com"><i>lokeshpaneru20508@gmail.com</i></a></li>
-        <li>Location: Haldwani, Uttarakhand</li>
-    </ul>
-</div>
-</div>
-<footer class="footer">
-    <p>&copy; 2025 Lokesh's Website</p>
-  </footer>
+        <section class="section" id="education">
+            <h2>Education</h2>
+            <div class="section-item">
+                <h3>Bachelor of Technology in Computer Science and Engineering (IoT and Data Science)</h3>
+                <p>Amrapali University, Haldwani | 2024 - 2028</p>
+                <ul>
+                    <li>Current CGPA: 8.53</li>
+                    <li>Specializing in IoT and Data Science with focus on web development and AI/ML</li>
+                    <li>Active participant in hackathons, robotics competitions, and technical workshops</li>
+                </ul>
+            </div>
+            <div class="section-item">
+                <h3>Class XII (Mathematics, Physics, Chemistry)</h3>
+                <p>Hargovind Suyal Saraswati Vidya Mandir, Uttarakhand Board | 2024</p>
+                <ul>
+                    <li>Percentage: 75%</li>
+                    <li>Focused on core subjects with strong foundation in physics and mathematics</li>
+                </ul>
+            </div>
+            <div class="section-item">
+                <h3>Class X (Uttarakhand Board)</h3>
+                <p>Hargovind Suyal Saraswati Vidya Mandir | 2022</p>
+                <ul>
+                    <li>Percentage: 73%</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section" id="experience">
+            <h2>Technical Experience</h2>
+            <div class="section-item">
+                <h3>AI Data Trainer and Prompt Engineer | Outlier.ai</h3>
+                <p>Jan 2025 - Mar 2025</p>
+                <ul>
+                    <li>Evaluated AI-generated responses for accuracy, coherence, and adherence to guidelines.</li>
+                    <li>Designed, refined, and tested prompts to enhance large language model output quality.</li>
+                    <li>Performed structured data annotation and labeling to maintain dataset precision.</li>
+                    <li>Improved model accuracy by implementing optimized prompt engineering techniques.</li>
+                </ul>
+            </div>
+            <div class="section-item">
+                <h3>Frontend Developer (Remote, NDA Project) | Prajna AI</h3>
+                <p>2025 - Present</p>
+                <ul>
+                    <li>Build responsive, interactive UI components using Next.js, Tailwind CSS, and React Hooks.</li>
+                    <li>Collaborate with backend engineers to integrate APIs for an AI-driven platform.</li>
+                    <li>Apply best UI and UX practices while maintaining confidentiality under NDA.</li>
+                    <li>Optimize frontend performance to ensure a seamless user experience.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Additional Experience</h2>
+            <div class="section-item">
+                <h3>Family Business Assistant (Part-time) | Haldwani</h3>
+                <p>Ongoing</p>
+                <ul>
+                    <li>Manage daily operations of a local retail shop, including billing, stock checks, and customer service.</li>
+                    <li>Handle digital transactions, maintain inventory records, and support walk-in customers.</li>
+                    <li>Develop practical experience in time management, communication, and small-scale business operations.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section" id="projects">
+            <h2>Projects</h2>
+            <div class="section-item">
+                <h3>Smart Cleaning Bot | Team Leader, AtomQuest 2025</h3>
+                <p>Aug 2025 - Present</p>
+                <ul>
+                    <li>Designed a semi-autonomous robot to collect dry waste while actively avoiding obstacles.</li>
+                    <li>Integrated ESP32, ultrasonic and IR sensors, and motor driver circuits for guided navigation.</li>
+                    <li>Implemented an optimized algorithm for obstacle avoidance and line following.</li>
+                    <li>Improved navigation accuracy by 25% through sensor calibration and motor tuning.</li>
+                </ul>
+            </div>
+            <div class="section-item">
+                <h3>Smart Recycling Hub (Haldwani)</h3>
+                <p>2025</p>
+                <ul>
+                    <li>Developed a production-ready Next.js and Tailwind CSS platform for smart waste management.</li>
+                    <li>Delivered features including live map tracking, geolocation routing, user reviews, and a management dashboard.</li>
+                    <li><strong>Key Features:</strong>
+                        <ul>
+                            <li>Live map using Leaflet and OpenStreetMap with color-coded bin markers.</li>
+                            <li>Geolocation to find the nearest bin and visualize routes.</li>
+                            <li>Google Maps deep links for turn-by-turn navigation.</li>
+                            <li>Dashboard with sorting, filtering, and high-priority bin alerts.</li>
+                            <li>Review submissions with real-time updates using localStorage.</li>
+                            <li>Modern, responsive UI with dark mode support.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Tech Stack:</strong> Next.js 15 (App Router), React 19, TypeScript 5, Tailwind CSS 4, PostCSS, Leaflet 1.9, React-Leaflet 5, OSM Tiles, Next.js route handlers.</li>
+                    <li><a href="https://github.com/Techy-Play/Smart-Recycling-System" target="_blank" rel="noopener noreferrer">📁 GitHub Repository</a> | <a href="https://smart-recycling-system.vercel.app/" target="_blank" rel="noopener noreferrer">🌐 Live Demo</a></li>
+                </ul>
+            </div>
+            <div class="section-item">
+                <h3>IoT Home Automation | Smart Home Control Using ESP32 and Sinric Pro API</h3>
+                <p>2024</p>
+                <ul>
+                    <li>Built a Wi-Fi enabled automation system allowing remote appliance control via mobile app and voice assistants.</li>
+                    <li>Implemented secure, cloud-based automation with real-time status updates.</li>
+                    <li>Delivered high reliability with minimal latency for household automation.</li>
+                </ul>
+            </div>
+            <div class="section-item">
+                <h3>Smart Auto Irrigation System | IoT-Based Soil Moisture Monitoring</h3>
+                <p>2024</p>
+                <ul>
+                    <li>Designed an automated irrigation workflow leveraging ESP32 and soil moisture sensors.</li>
+                    <li>Automated water delivery using relays and pumps managed via cloud data.</li>
+                    <li>Reduced water waste while maintaining optimal soil moisture levels.</li>
+                </ul>
+            </div>
+            <div class="section-item">
+                <h3>Railway Platform Security System | Kumaon Inter School Competition Project</h3>
+                <p>Dec 2023</p>
+                <ul>
+                    <li>Developed an ESP32-based safety system to prevent platform accidents.</li>
+                    <li>Used ultrasonic sensors to detect incoming trains and servo motors to automate barricades.</li>
+                    <li>Restricted crossing during hazardous moments and enabled safe passage with arriving trains.</li>
+                    <li>Won first prize (INR 11,000) and earned a 50% scholarship to Amrapali University.</li>
+                </ul>
+            </div>
+            <div class="section-item">
+                <h3>Alumni Connect Platform | National Level Hackathon, Graphic Era Hill University</h3>
+                <p>2024</p>
+                <ul>
+                    <li>Secured first runner-up by delivering an alumni-student networking platform.</li>
+                    <li>Implemented mentorship pairing, alumni directory, job postings, discussion forums, and event scheduling.</li>
+                    <li><strong>Tech Stack:</strong>
+                        <ul>
+                            <li>Frontend: HTML, CSS, Bootstrap</li>
+                            <li>Backend: Python (Flask)</li>
+                            <li>Database: SQLite (campus2career.db)</li>
+                            <li>Hosting: Render.com</li>
+                        </ul>
+                    </li>
+                    <li><a href="https://github.com/Techy-Play/AMP-Devs" target="_blank" rel="noopener noreferrer">📁 GitHub Repository</a> | <a href="https://alumniconnect-d7mo.onrender.com/" target="_blank" rel="noopener noreferrer">🌐 Live Project</a> (allow 1-2 minutes for loading)</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section" id="skills">
+            <h2>Technical Skills</h2>
+            <ul>
+                <li><strong>Programming Languages:</strong> Python, C, C++, Java, SQL, Kotlin</li>
+                <li><strong>Web Technologies:</strong> HTML, CSS, Bootstrap 5, JavaScript, React.js, Next.js, Tailwind CSS, Flask</li>
+                <li><strong>IoT and Tools:</strong> ESP32, Arduino, Tinkercad</li>
+                <li><strong>Design and Modeling:</strong> AutoCAD, Fusion 360, Figma</li>
+                <li><strong>Databases:</strong> MySQL, PostgreSQL, SQLite (with Python integration)</li>
+                <li><strong>Version Control:</strong> Git, GitHub</li>
+                <li><strong>AI and ML:</strong> Prompt engineering, vibe coding, learning data annotation and model evaluation</li>
+                <li><strong>Office and Productivity:</strong> Microsoft Word, PowerPoint, Excel</li>
+                <li><strong>Software and Tools:</strong> VS Code, Figma, MS Office, Arduino IDE, Android Studio, VirtualBox, AWS</li>
+            </ul>
+        </section>
+
+        <section class="section" id="certifications">
+            <h2>Certifications</h2>
+            <ul>
+                <li>Python with IoT Robotics</li>
+                <li>SQL and Databases</li>
+                <li>Frontend Web Development (HTML, CSS, JavaScript)</li>
+                <li>Git and GitHub Training</li>
+                <li>Generative AI Studio Workshop</li>
+            </ul>
+        </section>
+
+        <section class="section" id="achievements">
+            <h2>Achievements</h2>
+            <ul>
+                <li>Winner, Kumaon Inter School Competition (Dec 2023) for developing an ESP32-based railway platform security system, awarded INR 11,000 and a 50% scholarship.</li>
+                <li>First runner-up, National Level Hackathon (2024) at Graphic Era Hill University for building the Alumni Connect Platform.</li>
+                <li>Finalist, AtomQuest 2025 National Robotics Competition.</li>
+            </ul>
+        </section>
+
+        <section class="section" id="interests">
+            <h2>Interests</h2>
+            <ul>
+                <li>Robotics</li>
+                <li>IoT development</li>
+                <li>Full stack web development</li>
+                <li>Ethical hacking</li>
+                <li>AI and automation</li>
+            </ul>
+        </section>
+
+        <section class="section" id="extracurriculars">
+            <h2>Extracurriculars</h2>
+            <p>Participated in a seven-day NSS (National Service Scheme) camp at Hargovind Suyal Saraswati Vidya Mandir focused on community service and social awareness activities.</p>
+        </section>
+
+        <section class="section" id="contact">
+            <h2>Contact</h2>
+            <ul>
+                <li>Email: <a class="mail" href="mailto:lokeshpaneru20508@gmail.com">lokeshpaneru20508@gmail.com</a></li>
+                <li>Phone: <a href="tel:+9197198983725">+91 97198983725</a></li>
+                <li>Location: Haldwani, Uttarakhand</li>
+                <li>Portfolio: <a href="https://lokeshpaneru.netlify.app" target="_blank" rel="noopener">lokeshpaneru.netlify.app</a></li>
+            </ul>
+        </section>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2025 Lokesh Paneru</p>
+    </footer>
 
 
 <style>
@@ -138,6 +466,80 @@
   to { opacity: 1; }
 }
     </style>
+
+    <script defer>
+        // Hamburger menu toggle with ARIA support
+        const hamburger = document.getElementById('hamburger');
+        const navbar = document.getElementById('navbar');
+        const navLinks = document.querySelectorAll('.navbar a');
+
+        hamburger.addEventListener('click', function() {
+            const isExpanded = hamburger.getAttribute('aria-expanded') === 'true';
+            hamburger.setAttribute('aria-expanded', !isExpanded);
+            hamburger.classList.toggle('active');
+            navbar.classList.toggle('active');
+        });
+
+        // Close menu when a link is clicked
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                hamburger.classList.remove('active');
+                hamburger.setAttribute('aria-expanded', 'false');
+                navbar.classList.remove('active');
+            });
+        });
+
+        // Smooth scroll navigation highlighting
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('[id]');
+
+            function highlightNavLink() {
+                let current = '';
+
+                sections.forEach((section) => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    
+                    if (window.scrollY >= sectionTop - 200) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach((link) => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href').slice(1) === current) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+
+            window.addEventListener('scroll', highlightNavLink);
+            
+            // Handle click on nav links with smooth scroll
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetSection = document.querySelector(targetId);
+                    
+                    if (targetSection) {
+                        targetSection.scrollIntoView({ behavior: 'smooth' });
+                        window.history.pushState(null, null, targetId);
+                    }
+                });
+            });
+
+            // Initial highlight
+            highlightNavLink();
+
+            // Register Service Worker for PWA
+            if ('serviceWorker' in navigator) {
+                navigator.serviceWorker.register('/service-worker.js')
+                    .then((reg) => console.log('✓ Service Worker registered:', reg))
+                    .catch((err) => console.log('✗ Service Worker registration failed:', err));
+            }
+        });
+    </script>
     </body>
 
 

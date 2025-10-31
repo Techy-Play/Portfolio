@@ -1,0 +1,85 @@
+# Security Headers for Netlify
+
+# All routes
+/*
+  # Enforce HTTPS with strict transport security
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+  
+  # Prevent MIME type sniffing
+  X-Content-Type-Options: nosniff
+  
+  # Prevent clickjacking/framing
+  X-Frame-Options: DENY
+  
+  # Enable XSS protection in older browsers
+  X-XSS-Protection: 1; mode=block
+  
+  # Control Referrer information
+  Referrer-Policy: strict-origin-when-cross-origin
+  
+  # Permissions/Feature Policy
+  Permissions-Policy: accelerometer=(), camera=(), microphone=(), geolocation=(self), payment=()
+  
+  # Content Security Policy - Prevent XSS and malicious scripts
+  Content-Security-Policy: default-src 'self' https:; script-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://www.googletagmanager.com https://www.google-analytics.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net; font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net data:; img-src 'self' data: https: blob:; connect-src 'self' https: wss: https://www.google-analytics.com; media-src 'self' https: blob:; frame-ancestors 'none'; base-uri 'self'; form-action 'self';
+  
+  # Enable compression
+  Content-Encoding: gzip
+  
+  # Cache policy - Don't cache HTML by default
+  Cache-Control: no-cache, no-store, must-revalidate, max-age=0
+
+# Cache CSS and JS for 1 year (use file hash in name for invalidation)
+/styles.css
+  Cache-Control: public, max-age=31536000, immutable
+
+/styles-*.css
+  Cache-Control: public, max-age=31536000, immutable
+
+/scripts/main.js
+  Cache-Control: public, max-age=31536000, immutable
+
+/scripts/*.js
+  Cache-Control: public, max-age=31536000, immutable
+
+# Cache images for 1 year
+/images/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.jpg
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.jpeg
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.png
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.webp
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.gif
+  Cache-Control: public, max-age=31536000, immutable
+
+# Cache fonts for 1 year
+/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Cache manifest and service worker (with validation)
+/manifest.json
+  Cache-Control: public, max-age=3600
+
+/service-worker.js
+  Cache-Control: public, max-age=3600
+
+# JSON-LD and API responses
+/schema/*
+  Cache-Control: public, max-age=86400
+
+# SVG files
+/*.svg
+  Cache-Control: public, max-age=31536000, immutable
+
+# Video files
+/videos/*
+  Cache-Control: public, max-age=31536000, immutable

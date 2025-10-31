@@ -1,0 +1,40 @@
+User-agent: *
+Allow: /
+Disallow: /private/
+Disallow: /*.json$
+Disallow: /admin/
+Disallow: /.git/
+Disallow: /node_modules/
+
+# Google Crawlers
+User-agent: Googlebot
+Allow: /
+Request-rate: 100/1m
+
+# Bing Crawlers
+User-agent: Bingbot
+Allow: /
+Request-rate: 100/1m
+
+# AI Crawlers (Allow for AEO/GIO)
+User-agent: GPTBot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: AppleBot
+Allow: /
+
+User-agent: OmgiliBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+# Sitemap location
+Sitemap: https://lokeshpaneru.netlify.app/sitemap.xml
+Sitemap: https://lokeshpaneru.netlify.app/sitemap-projects.xml

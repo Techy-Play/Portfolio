@@ -1,0 +1,89 @@
+[build]
+  command = "echo 'Portfolio site ready to deploy!'"
+  publish = "."
+
+[build.environment]
+  NODE_ENV = "production"
+  NETLIFY_EDGE_FUNCTIONS = "true"
+
+# Redirects for common patterns
+[[redirects]]
+  from = "/:lang/index"
+  to = "/#home"
+  status = 301
+
+[[redirects]]
+  from = "/home"
+  to = "/#home"
+  status = 301
+
+[[redirects]]
+  from = "/about"
+  to = "/#profile"
+  status = 301
+
+[[redirects]]
+  from = "/work"
+  to = "/#projects"
+  status = 301
+
+[[redirects]]
+  from = "/portfolio"
+  to = "/#projects"
+  status = 301
+
+[[redirects]]
+  from = "/resume"
+  to = "/#education"
+  status = 301
+
+[[redirects]]
+  from = "/contact"
+  to = "/#contact"
+  status = 301
+
+# Default fallback for SPA
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Sitemap redirect (if needed)
+[[redirects]]
+  from = "/sitemap"
+  to = "/sitemap.xml"
+  status = 301
+
+[[redirects]]
+  from = "/robots"
+  to = "/robots.txt"
+  status = 301
+
+# Security headers via _headers file
+# (Already configured in _headers file)
+
+# Environment variables for analytics (optional)
+[context.production.environment]
+  GA_ID = "G_YOUR_GOOGLE_ANALYTICS_ID"
+  NETLIFY_ANALYTICS_ENABLED = "true"
+
+# Function configuration (for edge functions if needed later)
+[functions]
+  directory = "functions"
+  node_bundler = "esbuild"
+
+# Performance optimization
+[build.processing]
+  skip_processing = false
+
+[build.processing.css]
+  bundle = true
+
+[build.processing.js]
+  bundle = true
+
+# Preload assets
+[[headers]]
+  for = "/"
+  [headers.values]
+    Link = "</styles.css>; rel=preload; as=style, </service-worker.js>; rel=preload; as=script, </manifest.json>; rel=preload; as=fetch"
