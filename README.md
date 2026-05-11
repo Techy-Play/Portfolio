@@ -1,86 +1,171 @@
-# Lokesh Paneru — Professional Portfolio
+# Lokesh Paneru - Portfolio
 
-![Portfolio Preview](/public/projects/acadex-preview.png)
+A modern, responsive portfolio website built with Next.js 16, React 19, TypeScript, and Tailwind CSS. Features a comprehensive showcase of projects, skills, experience, and achievements with smooth animations and a beautiful dark theme.
 
-A modern, highly-performant personal portfolio built with **Next.js 15 (App Router)**, **React 19**, and **Tailwind CSS v4**. It features a glassmorphic design system, an interactive 3D CAD viewer, and comprehensive SEO optimization.
+## Features
 
-🌐 **Live Demo:** [lokeshpaneru.netlify.app](https://lokeshpaneru.netlify.app)
+- **Modern Design**: Dark theme with cyan accents, smooth gradients, and glassmorphism effects
+- **Responsive Layout**: Fully responsive design that works seamlessly on all devices
+- **Smooth Animations**: Fade-in and slide animations for engaging visual effects
+- **Fast Performance**: Built with Next.js for optimal performance and SEO
+- **Contact Form**: Functional contact form with email validation and API integration
+- **Project Showcase**: Detailed project cards with links to GitHub and live demos
+- **Skills Organization**: Skills categorized by type with visual badges
+- **Achievement Tracking**: Display of awards and recognitions with timeline
+- **Mobile Navigation**: Hamburger menu for mobile devices with smooth transitions
+- **Accessibility**: Semantic HTML and ARIA labels for better accessibility
+
+## Tech Stack
+
+- **Framework**: Next.js 16 with App Router
+- **UI Library**: React 19
+- **Styling**: Tailwind CSS 4 with custom configuration
+- **Language**: TypeScript
+- **Animations**: CSS animations and Framer Motion
+- **Fonts**: Google Fonts (Outfit)
+- **Image Optimization**: Next.js Image component
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js 18+ and npm/yarn/pnpm
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/Techy-Play/Portfolio.git
+cd Portfolio
+```
+
+2. Install dependencies:
+```bash
+npm install
+```
+
+3. Run the development server:
+```bash
+npm run dev
+```
+
+4. Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
+
+## Project Structure
+
+```
+app/
+├── layout.tsx           # Root layout with metadata
+├── page.tsx             # Main portfolio page
+├── globals.css          # Global styles
+├── api/
+│   └── contact/
+│       └── route.ts     # Contact form API endpoint
+├── data/
+│   └── portfolio-data.ts # Centralized portfolio content
+└── components/
+    ├── Header.tsx       # Navigation header
+    ├── Hero.tsx         # Hero section with intro
+    ├── Profile.tsx      # Profile/About section
+    ├── Education.tsx    # Education timeline
+    ├── Experience.tsx   # Work experience
+    ├── Projects.tsx     # Project showcase
+    ├── Skills.tsx       # Technical skills
+    ├── Certifications.tsx # Certifications
+    ├── Achievements.tsx # Awards and achievements
+    ├── Interests.tsx    # Interests and passions
+    ├── Extracurriculars.tsx # Activities
+    ├── Contact.tsx      # Contact form
+    ├── Footer.tsx       # Footer with links
+    ├── SectionWrapper.tsx # Reusable section component
+    └── ScrollToTop.tsx  # Scroll to top button
+```
+
+## Customization
+
+### Update Portfolio Content
+
+Edit `app/data/portfolio-data.ts` to update:
+- Personal information
+- Education details
+- Work experience
+- Projects and links
+- Skills and expertise
+- Certifications
+- Achievements
+- Contact information
+
+### Modify Styling
+
+The color scheme and styling can be customized in:
+- `tailwind.config.ts` - Tailwind color and theme configuration
+- `app/globals.css` - Global styles and animations
+- Component files - Individual component styling
+
+### Add Profile Image
+
+Replace `public/profile.JPG` with your profile image. Update the filename in `app/data/portfolio-data.ts` if needed.
+
+## Building for Production
+
+```bash
+npm run build
+npm run start
+```
+
+## Deployment
+
+### Deploy to Vercel (Recommended)
+
+1. Push your code to GitHub
+2. Import the repository in [Vercel](https://vercel.com)
+3. Vercel will automatically detect Next.js and deploy with optimal settings
+4. Set up a custom domain in Vercel dashboard
+
+### Environment Variables
+
+Create a `.env.local` file for environment variables (if needed):
+```
+NEXT_PUBLIC_SITE_URL=https://yourdomain.com
+```
+
+## Performance Optimizations
+
+- Image optimization with Next.js Image component
+- Code splitting and lazy loading
+- CSS minification with Tailwind
+- SEO optimization with metadata
+- Responsive images for different screen sizes
+
+## Browser Support
+
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+
+## Contact
+
+For inquiries about projects or collaboration:
+- Email: lokeshpaneru20508@email.com
+- Phone: +91 9719893725
+- Location: Haldwani, Uttarakhand, India
+
+## Social Links
+
+- [GitHub](https://github.com/Techy-Play)
+- [LinkedIn](https://linkedin.com/in/lokeshpaneru)
+
+## License
+
+This project is open source and available under the MIT License.
+
+## Acknowledgments
+
+- Built with [Next.js](https://nextjs.org/)
+- Styled with [Tailwind CSS](https://tailwindcss.com/)
+- Icons and inspiration from various design resources
 
 ---
 
-## 🚀 Features
-
-- **Modern Glassmorphism UI:** Built from scratch using modern CSS techniques, providing a sleek, premium, and highly responsive user experience across all devices.
-- **Interactive 3D CAD Viewer:** Natively renders massive `.glb` and `.step` 3D engineering models directly in the browser using an integrated WebGL engine.
-- **High-Performance Image Carousels:** Custom-built touch-enabled sliders for high-resolution project asset galleries.
-- **Native Video Integration:** High-quality HTML5 video playback for project demonstrations.
-- **Contact System:** Integrated with `nodemailer` to securely handle contact form submissions.
-- **SEO & Social Optimization:** Fully configured metadata, Open Graph (OG) tags, dynamic `sitemap.xml`, and `robots.txt` generation for perfect search indexing.
-- **Live Credential Verification:** Dynamic linking to Credly for live certification verification (e.g., Red Hat).
-
----
-
-## 🛠 Tech Stack
-
-### Framework & Core
-- **Next.js 15** (App Router)
-- **React 19**
-- **TypeScript** / **JavaScript**
-
-### Styling & UI
-- **Tailwind CSS v4** (Utility classes)
-- **Vanilla CSS** (Custom glassmorphism tokens, keyframe animations)
-- **FontAwesome / Lucide** (Iconography)
-
-### Utilities
-- **online-3d-viewer:** Integrated WebGL engine for `.glb` rendering.
-- **Nodemailer:** Email transport for the contact form.
-
----
-
-## 💻 Local Development Setup
-
-To run this project locally, follow these steps:
-
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/Techy-Play/Portfolio.git
-   cd Portfolio
-   ```
-
-2. **Install dependencies:**
-   ```bash
-   npm install
-   ```
-
-3. **Environment Variables:**
-   Create a `.env.local` file in the root directory and add your email configuration for the contact form to work:
-   ```env
-   EMAIL_USER=your_email@gmail.com
-   EMAIL_PASS=your_app_password
-   EMAIL_TO=your_receiving_email@gmail.com
-   ```
-
-4. **Run the development server:**
-   ```bash
-   npm run dev
-   ```
-
-5. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
----
-
-## 🚀 Deployment (Vercel / Netlify)
-
-This Next.js application is optimized for deployment on platforms like Vercel or Netlify.
-
-1. Push your code to your GitHub repository.
-2. Go to your Vercel or Netlify dashboard and create a new project.
-3. Import your GitHub repository.
-4. **Important:** Add the exact same environment variables (`EMAIL_USER`, `EMAIL_PASS`, `EMAIL_TO`) in the deployment dashboard's Environment Variables settings.
-5. Deploy. The build process (`npm run build`) will automatically generate the static files, the dynamic `sitemap.xml`, and the optimized images.
-
----
-
-## 📜 License
-&copy; 2026 Lokesh Paneru. All rights reserved. 
+**Last Updated**: May 2026
