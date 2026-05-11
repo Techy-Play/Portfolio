@@ -15,9 +15,31 @@ export async function generateMetadata({ params }) {
   const { slug } = await params;
   const project = getProjectBySlug(slug);
   if (!project) return { title: "Project Not Found" };
+  
+  const ogImage = project.image || "/og-image-1200x630.jpg";
+  
   return {
-    title: `${project.title} — Lokesh Paneru`,
+    title: project.title,
     description: project.description,
+    openGraph: {
+      title: project.title,
+      description: project.description,
+      url: `https://lokeshpaneru.netlify.app/projects/${project.slug}`,
+      images: [
+        {
+          url: ogImage,
+          width: 1200,
+          height: 630,
+          alt: project.title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: project.title,
+      description: project.description,
+      images: [ogImage],
+    },
   };
 }
 

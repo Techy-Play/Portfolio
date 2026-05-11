@@ -7,8 +7,17 @@ import Image from "next/image";
 import { projects } from "@/data/projects";
 
 export const metadata = {
-  title: "Projects — Lokesh Paneru",
+  title: "Projects",
   description: "Browse all projects by Lokesh Paneru — IoT, Web Development, Robotics, and more.",
+  openGraph: {
+    title: "Projects | Lokesh Paneru",
+    description: "Browse all projects by Lokesh Paneru — IoT, Web Development, Robotics, and more.",
+    url: "https://lokeshpaneru.netlify.app/projects",
+  },
+  twitter: {
+    title: "Projects | Lokesh Paneru",
+    description: "Browse all projects by Lokesh Paneru — IoT, Web Development, Robotics, and more.",
+  },
 };
 
 export default function ProjectsPage() {
