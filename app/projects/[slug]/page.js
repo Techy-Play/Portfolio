@@ -72,18 +72,56 @@ export default async function ProjectDetailPage({ params }) {
         )}
 
         {/* Video Section */}
-        {project.videoUrl && (
+        {project.videoUrl && (() => {
+          const videoSrc = Array.isArray(project.videoUrl) ? project.videoUrl[0] : project.videoUrl;
+          const isNativeVideo = videoSrc?.endsWith('.mp4') || videoSrc?.endsWith('.webm');
+          
+          return (
+            <div style={{ marginBottom: 48 }}>
+              <span className="section-label">Demo Video</span>
+              <h2 className="section-title" style={{ fontSize: "1.5rem", marginBottom: 16 }}>Watch it <span className="gradient-text">in Action</span></h2>
+              <div className="glass-card video-wrapper" style={{ overflow: 'hidden', position: 'relative' }}>
+                {isNativeVideo ? (
+                  <video
+                    src={videoSrc}
+                    controls
+                    playsInline
+                    preload="metadata"
+                    poster={project.image || (project.images && project.images[0])}
+                    className="video-iframe"
+                    style={{ objectFit: 'cover', width: '100%', display: 'block' }}
+                  />
+                ) : (
+                  <iframe
+                    src={videoSrc}
+                    title={`${project.title} — Demo Video`}
+                    className="video-iframe"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
+                )}
+              </div>
+            </div>
+          );
+        })()}
+
+        {/* CAD Model Section */}
+        {project.cadModel && (
           <div style={{ marginBottom: 48 }}>
-            <span className="section-label">Demo Video</span>
-            <h2 className="section-title" style={{ fontSize: "1.5rem", marginBottom: 16 }}>Watch it <span className="gradient-text">in Action</span></h2>
-            <div className="glass-card video-wrapper">
-              <iframe
-                src={project.videoUrl}
-                title={`${project.title} — Demo Video`}
-                className="video-iframe"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
+            <span className="section-label">3D Design</span>
+            <h2 className="section-title" style={{ fontSize: "1.5rem", marginBottom: 16 }}>Explore the <span className="gradient-text">CAD Model</span></h2>
+            <div className="glass-card" style={{ padding: 40, display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
+              <div style={{ width: 80, height: 80, borderRadius: 20, background: 'rgba(123,47,247,0.1)', border: '1px solid rgba(123,47,247,0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: 20 }}>
+                <i className="fa-solid fa-cube" style={{ fontSize: '2.5rem', color: 'var(--neon-purple)' }} />
+              </div>
+              <h3 style={{ marginBottom: 12, fontFamily: "'Outfit', sans-serif", fontSize: '1.4rem' }}>3D CAD Design Available</h3>
+              <p style={{ color: 'var(--text-secondary)', marginBottom: 32, maxWidth: 540, lineHeight: 1.7 }}>
+                The full 3D CAD design for this robot is available. Since raw <strong>.STEP</strong> files cannot be natively rendered directly in the browser, you can download the 36 MB engineering file below to view and edit it in your preferred CAD software like Fusion 360 or SolidWorks.
+              </p>
+              
+              <a href={project.cadModel.downloadUrl} download className="btn-primary" style={{ padding: '16px 36px' }}>
+                <i className="fa-solid fa-download" /> Download .STEP File
+              </a>
             </div>
           </div>
         )}
@@ -100,6 +138,7 @@ export default async function ProjectDetailPage({ params }) {
                   alt={`${project.title} — Live Preview`}
                   width={1200}
                   height={675}
+                  quality={100}
                   style={{ width: "100%", height: "auto", display: "block", borderRadius: "var(--radius) var(--radius) 0 0" }}
                 />
               ) : project.liveUrl ? (
@@ -170,7 +209,10 @@ export default async function ProjectDetailPage({ params }) {
                       <h4>{p.title}</h4>
                       <p style={{ marginBottom: 12 }}>{p.description.substring(0, 100)}...</p>
                       <div className="project-tags" style={{ padding: 0 }}>
-                        {p.techStack.slice(0, 3).map((t) => <span key={t} className="project-tag">{t}</span>)}
+                        {p.techStack.slice(0, 4).map((t) => <span key={t} className="project-tag">{t}</span>)}
+                        {p.techStack.length > 4 && (
+                          <span className="project-tag more-tag">+{p.techStack.length - 4} more</span>
+                        )}
                       </div>
                     </div>
                   </div>

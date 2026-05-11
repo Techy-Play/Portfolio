@@ -17,6 +17,30 @@ export default function ImageCarousel({ images = [], alt = "Project" }) {
     return () => clearInterval(timer);
   }, [paused, images.length, next]);
 
+  const [touchStart, setTouchStart] = useState(null);
+  const [touchEnd, setTouchEnd] = useState(null);
+
+  const minSwipeDistance = 50;
+
+  const handleTouchStart = (e) => {
+    setTouchEnd(null);
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchMove = (e) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+    const distance = touchStart - touchEnd;
+    if (distance > minSwipeDistance) {
+      next(); // swipe left -> next
+    } else if (distance < -minSwipeDistance) {
+      setActive((prev) => (prev - 1 + images.length) % images.length); // swipe right -> prev
+    }
+  };
+
   if (!images || images.length === 0) return null;
 
   return (
@@ -25,16 +49,33 @@ export default function ImageCarousel({ images = [], alt = "Project" }) {
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >
-      {/* Main Image */}
-      <div className="carousel-main">
-        <Image
-          src={images[active]}
-          alt={`${alt} — View ${active + 1}`}
-          width={1200}
-          height={675}
-          className="carousel-image"
-          priority={active === 0}
-        />
+      {/* Main Image Container for Sliding */}
+      <div 
+        className="carousel-main"
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
+      >
+        <div 
+          className="carousel-inner" 
+          style={{ transform: `translateX(-${active * 100}%)` }}
+        >
+          {images.map((img, i) => (
+            <div className="carousel-slide" key={i}>
+              <Image
+                src={img}
+                alt={`${alt} — View ${i + 1}`}
+                fill
+                sizes="(max-width: 1200px) 100vw, 1200px"
+                quality={100}
+                className="carousel-image"
+                priority={i === 0}
+                draggable={false}
+              />
+            </div>
+          ))}
+        </div>
+
         {/* Arrows */}
         {images.length > 1 && (
           <>

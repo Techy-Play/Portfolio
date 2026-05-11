@@ -142,7 +142,10 @@ export default function Home() {
                       <p>{project.description}</p>
                     </div>
                     <div className="project-tags">
-                      {project.techStack.slice(0, 5).map((t) => <span key={t} className="project-tag">{t}</span>)}
+                      {project.techStack.slice(0, 4).map((t) => <span key={t} className="project-tag">{t}</span>)}
+                      {project.techStack.length > 4 && (
+                        <span className="project-tag more-tag">+{project.techStack.length - 4} more</span>
+                      )}
                     </div>
                   </div>
                 </Link>
