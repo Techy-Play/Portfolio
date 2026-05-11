@@ -38,7 +38,7 @@ export default function Home() {
             <div className="hero-image-glow" />
             <div className="hero-image-ring">
               <div className="hero-image">
-                <Image src="/profile-lokesh.png" alt="Lokesh Paneru" width={320} height={320} style={{ width: "100%", height: "100%", borderRadius: "50%", objectFit: "cover" }} priority />
+                <Image src="/profile.jpg" alt="Lokesh Paneru" width={320} height={320} style={{ width: "100%", height: "100%", borderRadius: "50%", objectFit: "cover" }} priority />
               </div>
             </div>
           </div>

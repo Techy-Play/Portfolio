@@ -102,13 +102,7 @@ export default async function CertDetailPage({ params }) {
               >
                 <i className="fa-solid fa-arrow-up-right-from-square" /> Verify Credential
               </a>
-              <button
-                className="btn-outline credential-copy"
-                onClick={null}
-                data-credential={cert.credentialId}
-              >
-                <i className="fa-regular fa-copy" /> Copy ID
-              </button>
+
             </div>
           </div>
         )}
@@ -155,8 +149,8 @@ function getVerifyUrl(cert) {
   const issuer = cert.issuer.toLowerCase();
   if (issuer.includes("hackerrank")) return `https://www.hackerrank.com/certificates/${cert.credentialId}`;
   if (issuer.includes("cisco")) return `https://www.credly.com/badges/${cert.credentialId}`;
-  if (issuer.includes("red hat")) return `https://rhtapps.redhat.com/verify?certId=${cert.credentialId}`;
-  if (issuer.includes("rasa")) return `https://academy.rasa.io/certificates/${cert.credentialId}`;
+  if (issuer.includes("red hat")) return `https://www.credly.com/badges/${cert.credentialId}`;
+  if (issuer.includes("rasa")) return `https://www.linkedin.com/in/lokeshpaneru/details/certifications/`;
   if (issuer.includes("simplilearn")) return `https://www.simplilearn.com/skillup-certificate-landing?token=${cert.credentialId}`;
   // Default — LinkedIn profile
   return "https://www.linkedin.com/in/lokeshpaneru/details/certifications/";

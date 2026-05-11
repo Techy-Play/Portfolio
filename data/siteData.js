@@ -67,6 +67,7 @@ export const certifications = [
     title: "Getting Started with Linux Fundamentals (RH104)",
     issuer: "Red Hat",
     date: "Apr 2026",
+    credentialId: "4e9c847d-5634-4c89-a3e9-b2c7305baac2",
     image: "/certificates/Red Hat TrainingGetting Started with Linux Fundamentals.png",
     description: "Red Hat Training certification covering Linux fundamentals including system administration, file management, user management, and core Linux server concepts on RHEL 9.1.",
     skills: ["Linux", "Linux Server", "System Administration"],
@@ -170,15 +171,7 @@ export const certifications = [
     description: "ISO-certified training in Python programming applied to IoT and robotics projects, covering embedded systems, sensor integration, and automation scripting.",
     skills: ["IoT", "Embedded Systems", "Python", "Robotics"],
   },
-  {
-    slug: "sql-databases",
-    title: "SQL and Databases",
-    issuer: "Training Institute",
-    date: "2024",
-    image: "/certificates/SQL Basic Certification.jpg",
-    description: "Certification in SQL querying, database design, normalization, and working with MySQL, PostgreSQL, and SQLite databases.",
-    skills: ["MySQL", "PostgreSQL", "SQLite"],
-  },
+
 ];
 
 export function getCertBySlug(slug) {
