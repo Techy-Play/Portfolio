@@ -34,6 +34,36 @@ export default function RootLayout({ children }) {
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              "name": "Lokesh Paneru",
+              "url": "https://lokeshpaneru.netlify.app",
+              "jobTitle": "Full Stack Developer & IoT Specialist",
+              "alumniOf": {
+                "@type": "CollegeOrUniversity",
+                "name": "Amrapali University"
+              },
+              "knowsAbout": [
+                "Software Development",
+                "Web Development",
+                "Internet of Things",
+                "ESP32",
+                "Next.js",
+                "React",
+                "Python",
+                "Artificial Intelligence"
+              ],
+              "sameAs": [
+                "https://github.com/Techy-Play",
+                "https://www.linkedin.com/in/lokeshpaneru/"
+              ]
+            })
+          }}
+        />
       </head>
       <body>
         {/* Ambient Glow Orbs */}

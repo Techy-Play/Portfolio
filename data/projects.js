@@ -20,7 +20,7 @@ export const projects = [
 
     ],
 
-    videoUrl: ["/projects/bot/AtomQuest2025_TechieDevs_AmrapaliUniversity_Video.mp4",
+    videoUrl: ["https://drive.google.com/file/d/1qfN5Kl4Gk8M6Sf1wEb4fZ38ucJs8ct8q/preview"
     ],
     cadModel: {
       downloadUrl: "/projects/bot/BOt Full Designs.step"
@@ -155,7 +155,7 @@ export const projects = [
       "/projects/KISC/Railway Security.jpg",
       "/projects/KISC/Railway Security1.jpg",
     ],
-    videoUrl: ["/projects/KISC/video.mp4"],
+    videoUrl: ["https://drive.google.com/file/d/10OdXeON4id1Re_TBTrtg8dFticPxhQZV/preview"],
     description: "ESP32-based safety system to prevent platform accidents. Won 1st prize (₹11,000) and earned a 50% scholarship to Amrapali University.",
     longDescription: "Developed an ESP32-based safety system for the Kumaon Inter School Competition to prevent railway platform accidents. The system uses ultrasonic sensors to detect incoming trains and servo motors to automate barricades, restricting crossing during hazardous moments and enabling safe passage. Won first prize (INR 11,000) and earned a 50% scholarship to Amrapali University.",
     features: [
