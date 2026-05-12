@@ -1,7 +1,7 @@
 import { getAllSlugs } from "@/data/projects";
 
 export default function sitemap() {
-  const baseUrl = "https://lokeshpaneru.netlify.app";
+  const baseUrl = "https://lokeshpaneru.vercel.app";
 
   // Static routes
   const staticRoutes = ["", "/projects"].map((route) => ({

@@ -4,6 +4,6 @@ export default function robots() {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://lokeshpaneru.netlify.app/sitemap.xml",
+    sitemap: "https://lokeshpaneru.vercel.app/sitemap.xml",
   };
 }

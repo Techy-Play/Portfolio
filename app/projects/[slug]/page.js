@@ -24,7 +24,7 @@ export async function generateMetadata({ params }) {
     openGraph: {
       title: project.title,
       description: project.description,
-      url: `https://lokeshpaneru.netlify.app/projects/${project.slug}`,
+      url: `https://lokeshpaneru.vercel.app/projects/${project.slug}`,
       images: [
         {
           url: ogImage,

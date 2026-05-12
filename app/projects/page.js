@@ -12,7 +12,7 @@ export const metadata = {
   openGraph: {
     title: "Projects | Lokesh Paneru",
     description: "Browse all projects by Lokesh Paneru — IoT, Web Development, Robotics, and more.",
-    url: "https://lokeshpaneru.netlify.app/projects",
+    url: "https://lokeshpaneru.vercel.app/projects",
   },
   twitter: {
     title: "Projects | Lokesh Paneru",

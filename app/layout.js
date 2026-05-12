@@ -1,19 +1,19 @@
 import "./globals.css";
 
 export const metadata = {
-  metadataBase: new URL("https://lokeshpaneru.netlify.app"),
+  metadataBase: new URL("https://lokeshpaneru.vercel.app"),
   title: {
     default: "Lokesh Paneru — B.Tech CSE Student | IoT, Web Dev, AI/ML Portfolio",
     template: "%s | Lokesh Paneru",
   },
   description: "B.Tech CSE student specializing in IoT and Data Science. Full-stack developer, AI/ML enthusiast, and robotics competitor. View my portfolio projects and skills.",
   keywords: ["Lokesh Paneru", "Portfolio", "Developer", "IoT", "Data Science", "Full Stack", "CSE", "Amrapali University", "ESP32", "Next.js", "React"],
-  authors: [{ name: "Lokesh Paneru", url: "https://lokeshpaneru.netlify.app" }],
+  authors: [{ name: "Lokesh Paneru", url: "https://lokeshpaneru.vercel.app" }],
   creator: "Lokesh Paneru",
   openGraph: {
     title: "Lokesh Paneru — Portfolio",
     description: "B.Tech CSE student specializing in IoT and Data Science. Full-stack developer, AI/ML enthusiast, and robotics competitor.",
-    url: "https://lokeshpaneru.netlify.app",
+    url: "https://lokeshpaneru.vercel.app",
     siteName: "Lokesh Paneru Portfolio",
     locale: "en_IN",
     type: "website",
@@ -47,8 +47,8 @@ export default function RootLayout({ children }) {
                 "@context": "https://schema.org",
                 "@type": "Person",
                 "name": "Lokesh Paneru",
-                "url": "https://lokeshpaneru.netlify.app",
-                "image": "https://lokeshpaneru.netlify.app/ico.jpg",
+                "url": "https://lokeshpaneru.vercel.app",
+                "image": "https://lokeshpaneru.vercel.app/ico.jpg",
                 "jobTitle": "Full Stack Developer & IoT Specialist",
                 "alumniOf": {
                   "@type": "CollegeOrUniversity",
@@ -73,10 +73,10 @@ export default function RootLayout({ children }) {
                 "@context": "https://schema.org",
                 "@type": "WebSite",
                 "name": "Lokesh Paneru Portfolio",
-                "url": "https://lokeshpaneru.netlify.app",
+                "url": "https://lokeshpaneru.vercel.app",
                 "potentialAction": {
                   "@type": "SearchAction",
-                  "target": "https://lokeshpaneru.netlify.app/?q={search_term_string}",
+                  "target": "https://lokeshpaneru.vercel.app/?q={search_term_string}",
                   "query-input": "required name=search_term_string"
                 }
               }
