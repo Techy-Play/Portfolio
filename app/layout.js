@@ -24,6 +24,11 @@ export const metadata = {
     description: "B.Tech CSE student specializing in IoT and Data Science. Full-stack developer, AI/ML enthusiast, and robotics competitor.",
     creator: "@lokeshpaneru",
   },
+  icons: {
+    icon: '/ico.jpg',
+    shortcut: '/ico.jpg',
+    apple: '/ico.jpg',
+  },
 };
 
 export default function RootLayout({ children }) {
@@ -37,31 +42,45 @@ export default function RootLayout({ children }) {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Person",
-              "name": "Lokesh Paneru",
-              "url": "https://lokeshpaneru.netlify.app",
-              "jobTitle": "Full Stack Developer & IoT Specialist",
-              "alumniOf": {
-                "@type": "CollegeOrUniversity",
-                "name": "Amrapali University"
+            __html: JSON.stringify([
+              {
+                "@context": "https://schema.org",
+                "@type": "Person",
+                "name": "Lokesh Paneru",
+                "url": "https://lokeshpaneru.netlify.app",
+                "image": "https://lokeshpaneru.netlify.app/ico.jpg",
+                "jobTitle": "Full Stack Developer & IoT Specialist",
+                "alumniOf": {
+                  "@type": "CollegeOrUniversity",
+                  "name": "Amrapali University"
+                },
+                "knowsAbout": [
+                  "Software Development",
+                  "Web Development",
+                  "Internet of Things",
+                  "ESP32",
+                  "Next.js",
+                  "React",
+                  "Python",
+                  "Artificial Intelligence"
+                ],
+                "sameAs": [
+                  "https://github.com/Techy-Play",
+                  "https://www.linkedin.com/in/lokeshpaneru/"
+                ]
               },
-              "knowsAbout": [
-                "Software Development",
-                "Web Development",
-                "Internet of Things",
-                "ESP32",
-                "Next.js",
-                "React",
-                "Python",
-                "Artificial Intelligence"
-              ],
-              "sameAs": [
-                "https://github.com/Techy-Play",
-                "https://www.linkedin.com/in/lokeshpaneru/"
-              ]
-            })
+              {
+                "@context": "https://schema.org",
+                "@type": "WebSite",
+                "name": "Lokesh Paneru Portfolio",
+                "url": "https://lokeshpaneru.netlify.app",
+                "potentialAction": {
+                  "@type": "SearchAction",
+                  "target": "https://lokeshpaneru.netlify.app/?q={search_term_string}",
+                  "query-input": "required name=search_term_string"
+                }
+              }
+            ])
           }}
         />
       </head>
